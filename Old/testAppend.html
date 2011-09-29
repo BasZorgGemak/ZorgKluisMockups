@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test</title>
+
+<!--	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.css" /> -->
+	<link rel="stylesheet" href="css/jqm-docs.css" />
+	<link rel="stylesheet" href="css/jquery.mobile-1.0b1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+<!--	<script src="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.js"></script>	-->
+	
+	<script>
+     	$(document).ready(function() {
+				
+//		$("#test").append("<li>ASASASASA</li>");
+
+//		var list = "<ul " + "id=" + "\"test\"" + ">" + "</ul>";
+//		$("#testDiv").append(list);
+//		alert(list);
+				
+				$.getJSON('http://testserverhip.com.php5-23.dfw1-2.websitetestlink.com/encyc/data.php?method=medicijn-letters', function(medicijnLetter) {
+//					alert("<li>" + "Van " + data.letter[0].van + " tot " + data.letter[0].tot + "</li>");
+					
+//					$("#test").append("<li>Testt</li>");
+					
+					$.each(medicijnLetter.letter, function(i, item) {
+//						$("<li>" + "Van " + data.letter[i].van + " tot " + data.letter[i].tot + "</li>").appendTo("#test");
+				        $("#test").append("<li>" + medicijnLetter.letter[i].van + medicijnLetter.letter[i].tot + "</li>");
+					});
+				});
+
+//					$("testje").appendTo("#test");					
+
+//					$("</ul>").appendTo("#testDiv");
+
+//					$("<li>" + "Van " + data.letter[0].van + " tot " + data.letter[0].tot + "</li>").appendTo("#test");
+/*					var arr = []
+					//var arr = reallyLongArray;
+					$.each(data, function(index, value) {
+//						alert("test");
+//						for (var i=0, l=arr.length, a=[]; i<l; i++)
+//							{
+//								alert(data.letter[index].van + ': ' + value); 
+					    	 
+			    		arr.push("<li>" + "Van " + data.letter[i].van + " tot " + data.letter[i].tot + "</li>");
+//							}
+						$('<ul/>', {
+						    'class': 'my-new-list',
+						    html: items.join('')
+						  }).appendTo('body');				
+*/						
+//				});	
+
+		});
+	</script>
+
+</head> 
+<body> 
+	
+	<div id="testDiv">
+		<ul id="test">
+		</ul>	
+		
+	</div>	
+</body>
+</html>

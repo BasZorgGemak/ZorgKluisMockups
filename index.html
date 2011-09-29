@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login page</title>
+	
+	<link rel="stylesheet" href="css/jqm-docs.css" /> 
+<!--	<link rel="stylesheet" href="css/jquery.mobile-1.0b1.min.css" /> -->
+	<link rel="stylesheet" href="css/jquery.mobile-1.0b1.min.custom.css" />    
+	
+    <script>
+
+	</script>
+    
+	<script src="js/jquery-1.6.2.min.js"></script>
+	<script src="js/app.js"></script>
+   	<script src="js/jquery.mobile-1.0b2.min.js"></script>
+	<script src="lib/underscore-min.js"></script>
+
+		
+</head> 
+<body> 
+
+
+<div data-role="page"  id="jqm-home" class="type-home" data-theme="c">
+
+	<div data-role="content">
+		
+		<div class="content-primary" id="loadtest">
+
+		
+        	<div class="ui-grid-a">
+                
+                <div class="ui-block-a">
+	
+                    <ul class="ui-listview" data-role="listview" data-inset="true" data-theme="c">
+                        <li data-role="list-divider">
+                            Inloggen
+
+
+                        </li>
+    
+                        <li>
+                            <div data-role="fieldcontain">
+                                <label for="name"><h4>Naam</h4></label>
+                                <input type="text" name="name" id="name" value="" />
+                            </div>
+                            <div data-role="fieldcontain">
+                                <label for="password"><h4>Wachtwoord</h4></label>
+                                <input type="password" name="password" id="password" value="" />
+                            </div>
+                            <div class="ui-grid-b">
+								<div class="ui-block-a">
+                                	<a href="home.html" data-role="button" data-theme="b" data-inline="true">Inloggen</a>                				
+                                </div>
+				                <div class="ui-block-b">
+                                	<a href="help.html" data-role="button" data-theme="b" data-inline="true">Help</a>                                
+                                </div>
+                                <div class="ui-block-c">
+                                	<a href="home.html" class="icon yubikeyIcon"></a>                                
+                                </div>
+                            </div>
+                        </li>		
+                    </ul>	
+                </div>    		
+    
+    			<div class="ui-block-b">
+                
+                </div>
+ 
+            </div>          
+		</div>
+ 
+		<div class="content-secondary">
+
+			<nav id="meta">
+                        <a href="home.html" class="navIcon homeIcon"></a>
+                        <a href="profile.html" class="navIcon profileIcon"></a>
+                        <a href="settings.html" class="navIcon settingsIcon"></a>
+                        <a href="index.html" class="navIcon logoutIcon"></a>
+			</nav>
+			
+			<nav id="main">
+				<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="f">
+					<li data-theme="b"><a href="treatments.html" id="treatmentsBtn">Behandelingen</a></li>
+					<li><a href="agenda.html" id="scheduleBtn">Agenda</a></li>
+					<li><a href="messages.html" id="messageBtn">Berichten</a></li>
+					<li><a href="contacts.html" id="contactsBtn">Contacten</a></li>
+					<li><a href="encyclopedia.html" id="encyclopediaBtn">Encyclopedie</a></li>
+				</ul>
+			</nav>
+	
+		</div>
+
+	</div>
+	
+</div>
+
+</body>
+</html>
+
+            

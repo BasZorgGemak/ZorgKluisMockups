@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>jQuery Post test</title>
+		
+		<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+		<script src="lib/underscore-min.js"></script>
+		<script src="js/form.js"></script>
+		<script src="js/scroll.js"></script>
+		
+		<script src="js/app.js"></script>
+		
+	<!--	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.css" /> -->
+<!--		<link rel="stylesheet" href="css/jqm-docs.css" /> -->
+<!--		<link rel="stylesheet" href="css/jquery.mobile-1.0b1.min.css" /> -->
+<!--		<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script> -->
+<!--		<script src="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.js"></script> -->
+
+	<style>
+		p {
+			display: inline;
+		}
+	</style>
+
+</head>
+<body>
+	<ul>
+		<li class="person" id="1"><a href="#">Ronald Veenendaal</a></li>
+		<li class="person" id="2"><a href="#">Nel Trappel</a></li>
+		<li class="person" id="3"><a href="#">Bram Vermeulen</a></li>	
+	</ul>
+
+	<div>
+	<h3>Naam</h3>	
+	<p id="initials">Initials</p>
+	<p id="firstname">Firstname</p>
+	<p id="name">Name</p>
+
+	<h3>Adres</h3>
+	<p id="street">Street</p>
+	<p id="number">Number</p>
+	<br>
+	<p id="postalcode">Postalcode</p>
+	<p id="city">City</p>
+	
+	<h3>Problemen</h3>
+	<p id="problem">Problem</p>
+	
+	<h3>Medicijnen</h3>
+	<p id="medicin">Medicin</p>
+</div>
+
+
+<script>
+$(document).ready(function(){
+	console.log('test');
+	var currentUid = ""
+	var initials = ""
+	var firstname = ""
+	var name = ""
+	var problem = ""
+	var medicin = ""
+
+	$(".person").click(function() {
+		currentUid = $(this).attr("id");
+		alert("click");
+/*
+		// Test to check is request succeeds
+		$.ajax({
+		   type: "POST",
+		   url: "http://46.38.162.26:8080/DummyServlet/Dummy.do",
+		   dataType: 'text',
+		   data: { "uid": currentUid, "function": "use_object", "path": "path_to_initials" },
+		   success: function(data) {
+		     alert("post");
+		   },
+		   error: function(data) {
+		    alert("error");
+		   }
+		});
+*/
+
+		/* Send the data using post and put the results in a div */
+		// Name
+		$.post("http://46.38.162.26:8080/DummyServlet/Dummy.do", { "uid": currentUid, "function": "use_object", "path": "path_to_initials"  }, function(data) {
+	        alert("post");
+
+			initials = data;
+			alert(initials);
+			$("#initials").empty().append(initials);	
+	    });
+
+	    $.post("http://46.38.162.26:8080/DummyServlet/Dummy.do", { "uid": currentUid, "function": "use_object", "path": "path_to_firstname"  }, function(data) {
+			// Remove space after firstname
+			var str = data;
+			str = jQuery.trim(str);
+
+			firstname = str;
+			$("#firstname").empty().append("(" + firstname + ")");	
+	    });
+
+		$.post("http://46.38.162.26:8080/DummyServlet/Dummy.do", { "uid": currentUid, "function": "use_object", "path": "path_to_name"  }, function(data) {
+			name = data;
+			$("#name").empty().append(name);
+	    });
+
+		// Address
+		$.post("http://46.38.162.26:8080/DummyServlet/Dummy.do", { "uid": currentUid, "function": "use_object", "path": "path_to_street"  }, function(data) {
+			street = data;
+			$("#street").empty().append(street);
+	    });
+		$.post("http://46.38.162.26:8080/DummyServlet/Dummy.do", { "uid": currentUid, "function": "use_object", "path": "path_to_number"  }, function(data) {
+			number = data;
+			$("#number").empty().append(number);
+	    });
+		$.post("http://46.38.162.26:8080/DummyServlet/Dummy.do", { "uid": currentUid, "function": "use_object", "path": "path_to_postcode"  }, function(data) {
+			postalcode = data;
+			$("#postalcode").empty().append(postalcode);
+	    });
+		$.post("http://46.38.162.26:8080/DummyServlet/Dummy.do", { "uid": currentUid, "function": "use_object", "path": "path_to_city"  }, function(data) {
+			city = data;
+			$("#city").empty().append(city);
+	    });	
+
+		// Problem & Medicin
+		$.post("http://46.38.162.26:8080/DummyServlet/Dummy.do", { "uid": currentUid, "function": "use_object", "path": "path_to_all_problems"  }, function(data) {
+			problem = data;
+			$("#problem").empty().append(problem);
+	    });
+		$.post("http://46.38.162.26:8080/DummyServlet/Dummy.do", { "uid": currentUid, "function": "use_object", "path": "path_to_all_actual_medications"  }, function(data) {
+/*			var str = data;
+			var substr = str.split(" <br> ");
+			alert(substr[0]);
+			alert(substr[1]);
+*/			
+			medicin = data;
+			$("#medicin").empty().append(medicin);
+	    });
+	});
+
+
+});
+
+</script>
+
+</body>
+	
+</html>
