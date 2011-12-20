@@ -4,28 +4,28 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>JQM Test</title>
-	
+
 	<link rel="stylesheet" href="css/jqm-docs.css" />
 	<link rel="stylesheet" href="css/jquery.mobile-1.0b1.min.css" />
-	
+
 	<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script>
 	<script src="lib/underscore-min.js"></script>
 	<script src="js/app.js"></script>
-	
+
 <!--	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css" /> -->
 <!--	<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script> -->
-	
+
 	<script>
-		
+
 	$(document).ready(function(){
 
 		var firstLetter = ""
-	
+
 			$.getJSON('http://testserverhip.com.php5-23.dfw1-2.websitetestlink.com/encyc/data.php?method=medicijn-letters', function(medicijnLetter) {
-				// WORKAROUND: Remove last child (=empty li) to maintain list divider styling 
+				// WORKAROUND: Remove last child (=empty li) to maintain list divider styling
 				$("#test li:last").remove();
-				
+
 				// Get first and last medicin from each letter
 				$.each(medicijnLetter.letter, function(i, item) {
 					// Show first letter (so the entire alphabet)
@@ -36,29 +36,29 @@
 
 				// Refresh list to apply JQM styling
 				$('#test').listview("refresh");
-				
-	
-			});	
-	
-	
-	
-	
+
+
+			});
+
+
+
+
 /*			$.getJSON('http://testserverhip.com.php5-23.dfw1-2.websitetestlink.com/consumed/data.php', function(data) {
 //				alert("Naam: " + data.medicijn.naam);
 
 				$('<p>' + "Naam: "+ data.medicijn.naam + '</p>').appendTo('#content');
 				$('<p>' + "ID: " + data.medicijn.id + '</p>').appendTo('#content');
-				$('<p>' + "Z-index: " + data.medicijn.zi_nr + '</p>').appendTo('#content');	
+				$('<p>' + "Z-index: " + data.medicijn.zi_nr + '</p>').appendTo('#content');
 
 				$('<h3>' + data.pagina[0].titel + '</h3>').appendTo('#content');
 				$('<p>' + data.pagina[0].item + '</p>').appendTo('#content');
 
 				$('<h3>' + data.pagina[1].titel + '</h3>').appendTo('#content');
-				$('<p>' + data.pagina[1].item[0].kop + '</p>').appendTo('#content');				
+				$('<p>' + data.pagina[1].item[0].kop + '</p>').appendTo('#content');
 			});
-		
+
 			$(body).append("<p>test test test</p>");
-			
+
 				$.getJSON('http://testserverhip.com.php5-23.dfw1-2.websitetestlink.com/encyc/data.php?method=medicijn-letters', function(data) {
 //					alert("<li>" + "Van " + data.letter[0].van + " tot " + data.letter[0].tot + "</li>");
 //					var list = "test"
@@ -69,10 +69,10 @@
 					$.each(data.letter, function(i, item) {
 //						$("<li>" + "Van " + data.letter[i].van + " tot " + data.letter[i].tot + "</li>").appendTo("#test");
 				        $('#test').append("<li>" + "Van " + data.letter[i].van + " tot " + data.letter[i].tot + "</li>");
-						
+
 					});
 
-//					$("testje").appendTo("#test");					
+//					$("testje").appendTo("#test");
 
 					$("</ul>").appendTo("#testDiv");
 
@@ -83,45 +83,45 @@
 //						alert("test");
 //						for (var i=0, l=arr.length, a=[]; i<l; i++)
 //							{
-//								alert(data.letter[index].van + ': ' + value); 
-					    	 
+//								alert(data.letter[index].van + ': ' + value);
+
 			    		arr.push("<li>" + "Van " + data.letter[i].van + " tot " + data.letter[i].tot + "</li>");
 //							}
 						$('<ul/>', {
 						    'class': 'my-new-list',
 						    html: items.join('')
 						  }).appendTo('body');
-							
+
 /*						var table = $('table');
 						table.html(table.html() + a.join(''));
 						});
-					
-					
-//					$("<li>" + "Van " + data.letter[0].van + " tot " + data.letter[0].tot + "</li>").appendTo("#testUl");					
+
+
+//					$("<li>" + "Van " + data.letter[0].van + " tot " + data.letter[0].tot + "</li>").appendTo("#testUl");
 //					alert("Naam: " + data.letter[0]["@attributes"].id);
 					/*
 					$('<p>' + "Naam: "+ data.medicijn.naam + '</p>').appendTo('#content');
 					$('<p>' + "ID: " + data.medicijn.id + '</p>').appendTo('#content');
-					$('<p>' + "Z-index: " + data.medicijn.zi_nr + '</p>').appendTo('#content');	
+					$('<p>' + "Z-index: " + data.medicijn.zi_nr + '</p>').appendTo('#content');
 
 					$('<h3>' + data.pagina[0].titel + '</h3>').appendTo('#content');
 					$('<p>' + data.pagina[0].item + '</p>').appendTo('#content');
 
 					$('<h3>' + data.pagina[1].titel + '</h3>').appendTo('#content');
-					$('<p>' + data.pagina[1].item[0].kop + '</p>').appendTo('#content');				
+					$('<p>' + data.pagina[1].item[0].kop + '</p>').appendTo('#content');
 					*/
-//				});	
-/*				
+//				});
+/*
 				var textToInsert = '';
 				$.each(data, function(indexInArray, valueOfElement) {
 					textToInsert  += '<tr><td name="pieTD">' + item + '</td></tr>';
-					
-					alert(indexInArray + ': ' + valueOfElement);			
+
+					alert(indexInArray + ': ' + valueOfElement);
 				});
 //				$('table').append(textToInsert);
 				alert(textToInsert);
 
-			
+
 				var textToInsert = [];
 				var i = 0;
 				$.each(data, function(index, item) {
@@ -130,36 +130,36 @@
 				    textToInsert[i++] = '</td></tr>';
 				});
 				$('table').append(textToInsert.join(''));
-				
+
 			});
-			
+
 			/*
-			var map = { 
-			  'flammable': 'inflammable', 
-			  'duh': 'no duh' 
-			}; 
-			$.each(map, function(key, value) { 
-			  alert(key + ': ' + value); 
+			var map = {
+			  'flammable': 'inflammable',
+			  'duh': 'no duh'
+			};
+			$.each(map, function(key, value) {
+			  alert(key + ': ' + value);
 			});
-		
+
 		var textToInsert = '';
 		$.each(data	, function(count, item) {
 		    textToInsert  += '<tr><td name="pieTD">' + item + '</td></tr>';
 		});
 		$('table').append(textToInsert);
-		
-		
+
+
 /*
-		
+
 		$.getJSON('http://testserverhip.com.php5-23.dfw1-2.websitetestlink.com/consumed/data.php', function(data) {
-		
+
 		var textToInsert = '';
-		
+
 			$.each(data, function(count, item) {
 			    textToInsert  += '<tr><td name="pieTD">' + item + '</td></tr>';
 			});
 			$('table').append(textToInsert);
-			
+
 
 		$.getJSON('http://testserverhip.com.php5-23.dfw1-2.websitetestlink.com/consumed/data.php', function(data) {
 		  var items = [];
@@ -175,8 +175,8 @@
 		});
 
 		});
-		
-		
+
+
 		/*
 		//var arr = reallyLongArray;
 		$.each(arr, function(count, item) {
@@ -187,7 +187,7 @@
 		var table = $('table');
 		table.html(table.html() + a.join(''));
 		});
-		
+
 		/*
 		var arr = reallyLongArray;
 		var textToInsert = 'test';
@@ -196,22 +196,22 @@
 		});
 		$('table').append(textToInsert);
 		*/
-		
+
 		});
-		
+
      </script>
-	
-</head> 
-<body> 
+
+</head>
+<body>
 
 <div data-role="page" id="jqm-home" class="type-home">
 	<div data-role="content">
-		
+
 		<div class="content-primary" id="loadtest">
 
 			<div class="ui-grid-b">
 				<div class="ui-block-a">
-			
+
 				<nav id="homeAgenda">
 				<ul class="ui-listview" data-role="listview" data-inset="true">
 					<li data-role="list-divider">
@@ -226,12 +226,12 @@
 					<li>
 						<a href="acura.html">
 							<img class="ui-li-thumb" src="img/jan_jansen.jpg">
-							<h3>10:00 - 11:00</h3>							
+							<h3>10:00 - 11:00</h3>
 							<p class="ui-li-desc">
 								Afspraak om behandelplan te overleggen
-							</p>	
-						</a>		
-					</li>					
+							</p>
+						</a>
+					</li>
 					<li>
 						Donderdag 28 juli
 					</li>
@@ -243,15 +243,15 @@
 							</h3>
 							<p class="ui-li-desc">
 								Fysiotherapie
-							</p>	
-						</a>		
+							</p>
+						</a>
 					</li>
-				</ul>		
+				</ul>
 			</nav>
 
 			</div>
 			<div class="ui-block-b">
-			
+
 			<nav id="homeMessages">
 				<ul class="ui-listview" data-role="listview" data-inset="true">
 					<li data-role="list-divider">
@@ -266,23 +266,23 @@
 					<li>
 						<a href="acura.html">
 							<img class="ui-li-thumb" src="img/jan_jansen.jpg">
-							<h3>LUMC</h3>							
+							<h3>LUMC</h3>
 							<p class="ui-li-desc">
 								<strong>
 								Onderzoeksresultaten
 								</strong>
-							</p>	
+							</p>
 							<p class="ui-li-desc">
 								Uw onderzoeksresultaten zijn bekend
-							</p>	
-						</a>		
-					</li>					
-				</ul>		
-			</nav>			
+							</p>
+						</a>
+					</li>
+				</ul>
+			</nav>
 
 			</div>
 			<div class="ui-block-c">
-<!--		
+<!--
 			<nav id="homeContacts">
 				<ul class="ui-listview" data-role="listview" data-inset="true">
 					<li data-role="list-divider">
@@ -297,29 +297,29 @@
 					<li>
 						<a href="acura.html">
 							<img class="ui-li-thumb" src="img/jan_jansen.jpg">
-							<h3>Jan Jansen</h3>							
+							<h3>Jan Jansen</h3>
 							<p class="ui-li-desc">
 								heeft vanmiddag gewandeld
-							</p>	
-						</a>		
-					</li>					
-				</ul>		
+							</p>
+						</a>
+					</li>
+				</ul>
 			</nav>
 -->
 
 			<nav id="testDiv">
 				<ul id="test" class="ui-listview" data-role="listview" data-inset="true">
 					<li data-role="list-divider">
-						Medicijnen						
+						Medicijnen
 					</li>
-					<li>Laden...</li>						
-				</ul>		
+					<li>Laden...</li>
+				</ul>
 			</nav>
-	
+
 			</div>
 		</div>
 	</div>
-	
+
 
 		<div class="content-secondary">
 
@@ -339,7 +339,7 @@
 					</div>
 				</div>
 			</nav>
-			
+
 			<nav id="main">
 
 				<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="f">
@@ -350,11 +350,11 @@
 					<li><a href="#" id="encyclopediaBtn">Encyclopedie</a></li>
 				</ul>
 			</nav>
-	
+
 		</div>
 
 	</div>
-	
+
 </div>
 
 <!--
@@ -364,6 +364,6 @@
 			</ul>
 
 		</div>
--->		
+-->
 </body>
 </html>

@@ -1,7 +1,7 @@
 /* jqm docs css
 
-Beware: lots of last-minute CSS going on in here 
-cobblers, shoes, 
+Beware: lots of last-minute CSS going on in here
+cobblers, shoes,
 */
 
 #meta {
@@ -15,7 +15,7 @@ cobblers, shoes,
 	padding: 16px;
 
 }
-		
+
 .homeIcon {
 	background: transparent url(../img/png/Home32.png) no-repeat center right;
 }
@@ -71,7 +71,7 @@ body { background: #dddddd; }
 .ui-mobile .jqm-themeswitcher { margin: 10px 25px 10px 10px;  }
 
 h2 { margin-top:1.5em; }
-p code { font-size:1.2em; font-weight:bold; } 
+p code { font-size:1.2em; font-weight:bold; }
 
 dt { font-weight: bold; margin: 2em 0 .5em; }
 dt code, dd code { font-size:1.3em; line-height:150%; }
@@ -140,8 +140,8 @@ p.intro strong {
 	color: 					#fff;
 	font-weight: bold;
 	text-shadow: 0 -1px 1px #234403;
-	background-image: -moz-linear-gradient(top, 
-							#74b042, 
+	background-image: -moz-linear-gradient(top,
+							#74b042,
 							#56A00E);
 	background-image: -webkit-gradient(linear,left top,left bottom,
 		color-stop(0, 		#74b042),
@@ -162,12 +162,12 @@ p.intro strong {
 /* docs site layout */
 
 @media all and (min-width: 650px){
-	
+
 	.timeDiv {
 		postition: relative;
 		float:left;
 	}
-	
+
 	.jqm-home {
 		position: absolute;
 		left: 10px;
@@ -253,24 +253,24 @@ p.intro strong {
 		margin: 0;
 		padding: 0;
 	}
-	
+
 }
 @media all and (min-width: 750px){
 	.type-home .ui-content,
 	.type-interior .ui-content {
 		background-position: 39%;
 	}
-	.content-secondary {		
+	.content-secondary {
 		width: 20%;
 	}
 	.content-primary {
 		width: 70%;
 		padding-left: 1%;
-	}	
+	}
 	.type-interior .ui-content {
 		background-position: 34%;
 	}
-	
+
 	.timeDiv {
 		position: relative;
 		float:right;
@@ -287,7 +287,7 @@ p.intro strong {
 	.content-secondary {
 		width: 15%;
 		padding-right:1%;
-		margin: 0px 0 20px 1%;		
+		margin: 0px 0 20px 1%;
 	}
 	.type-interior .content-secondary {
 		margin: 0;
@@ -296,12 +296,12 @@ p.intro strong {
 	.content-primary {
 		width: 80%;
 		margin-left: 1%;
-		padding-left: 0;		
+		padding-left: 0;
 	}
 	.type-interior .content-primary {
 		width: 60%;
 	}
-	
+
 	.timeDiv {
 		postition: relative;
 		float:right;

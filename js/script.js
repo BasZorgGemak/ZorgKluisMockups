@@ -4,7 +4,7 @@
 	          $('#naam').load('test.html');
 	alert("test");
 	      });
-	
+
 			$("#treatmentsBtn").click(function(event){
 				$(".navitem").removeClass("navItemSelected");
 		        $('#container').load('treatments.html #container');
