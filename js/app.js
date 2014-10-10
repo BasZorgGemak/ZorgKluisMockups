@@ -1,6 +1,6 @@
 $(document).ready(function() {
-	
-	
+
+
 
 	/*
 	 *	Dit doet min of meer hetzelfde als je eerdere code, maar dan modulair,
@@ -11,33 +11,33 @@ $(document).ready(function() {
 	 *	je daarmee web applicaties bouwt.
 	 *
 	 */
-	 
+
 	// Set global vars
 	var navData;
 	var currentID;
 	var dataRef;
-	
+
 	// Get a list of navigation options
 	$.getJSON('json/nav.php', function(data) { navData = data; });
-	
+
 	$("notification").click(function(){
 		alert("test");
-		$('#notificationOnTime').hide();  
-		
+		$('#notificationOnTime').hide();
+
 	});
-/*	
+/*
 	// Capture click, get related data and display it
 	$("nav a").click(function(event){
-		
+
 		event.preventDefault();
 		var currentID = $(this).attr('id');
 	 	console.log(currentID);
-		
+
 		// Get the reference to the data for the current selected navigation item
 		var dataRef = _.detect(navData, function(val) { return val.id == currentID; }).data;
-		
+
 		// $("nav a").removeClass("navItemSelected");
-		
+
 		// Nu even voor test: HTML via load()
 		$('#loadtest').load(dataRef+'.html');
 		console.log("dataRef " + dataRef);
@@ -46,16 +46,16 @@ $(document).ready(function() {
         	// Put content in the appropriate places
         //});
 
-		
+
 		$(this).addClass("active");
-		
+
 		// Not refreshing div to apply CSS
 		// $("#loadtest").listview("refresh");
-		
+
     });
-	
-	
- */ 
+
+
+ */
 
 
   		// Swipe
@@ -69,7 +69,7 @@ $(document).ready(function() {
 				window.history.forward();
 				event.preventDefault();
 			});
-  
+
 		// Hide no results div
         $('#no-results').hide();
 
@@ -93,4 +93,4 @@ $(document).ready(function() {
 		// Set deffault page transition to 'none'
 		$.mobile.defaultTransition = "none";
 	});
-	
+

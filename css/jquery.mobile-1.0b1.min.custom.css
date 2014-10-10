@@ -6,7 +6,7 @@
  * Dual licensed under the MIT or GPL Version 2 licenses.
  * http://jquery.org/license
  */
- 
+
  // ZorgGemak Colors
  // Orange: 244 177 41
 background: #edcb8e; /* Old browsers */
@@ -29,38 +29,38 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88aac3', end
 background: linear-gradient(top, #88aac3 0%,#7c9cb2 99%); /* W3C */
 
  // Grey: 202 199 199
- 
- 
+
+
  // Custom list header (data-role="list-divider")
-ui-li 
-ui-li-divider 
-ui-btn 
-ui-bar-b 
-ui-corner-top 
+ui-li
+ui-li-divider
+ui-btn
+ui-bar-b
+ui-corner-top
 ui-btn-up-undefined
-                   
+
  // Custom list divider (ui-btn-up-...)
  ui-btn-up-e
  ui-li
  ui-li-static
  ui-body-c
-                                    
- 
+
+
  // Custom button
- 
+
  // Custom icon
- 
+
  // Custom
- 
+
  // Custom headers
- 
+
  // Custom count bubble
- 
+
 h4 {
 	font-size: 48px;
 	font-weight: bold
 }
- 
+
  .ui-bar-a {
 	border:1px solid #2a2a2a;
 	background:#111;

@@ -6,8 +6,8 @@
  * Dual licensed under the MIT or GPL Version 2 licenses.
  * http://jquery.org/license
  */
- 
- 
+
+
  /* CUSTOM THEME */
 
 .ui-btn-down-s {
@@ -20,11 +20,11 @@
 /*	background-image:-moz-linear-gradient(top, #396b9e, #4e89c5);
 	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #396b9e), color-stop(1, #4e89c5));
 	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#396b9e', EndColorStr='#4e89c5')";
-*/	
+*/
 	background-image: url(../img/sliderBgST.png);
 	background-size: 100% 100% ;
 	background-repeat:no-repeat;
-	background-position: 20% 20%; 
+	background-position: 20% 20%;
 }
 
 
@@ -37,7 +37,7 @@
 	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #e84427), color-stop(1, #bd2b0b));
 	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#e84427', EndColorStr='#bd2b0b')"
 }
- 
+
 .ui-bar-h-orange {
 	border:1px solid #a05c00;
 	background:#e77b00;
@@ -69,7 +69,7 @@
 	font-weight:bold
 }
 .ui-body-h {
-	border:1px solid #b3b3b3; 
+	border:1px solid #b3b3b3;
 /*	color:#333; */
 	text-shadow:0 1px 0 #fff;
 /*	background:#f0f0f0; */
@@ -119,8 +119,8 @@
 
 .ui-btn-down-h {
 	border:1px solid #225377;
-	background:#4e89c5; 
-	background: rgba(78, 137, 197, 0.1);  
+	background:#4e89c5;
+	background: rgba(78, 137, 197, 0.1);
 	font-weight:bold;
 	color:#fff;
 	text-shadow:0 -1px 1px #225377;
@@ -136,9 +136,9 @@
 	font-family:Helvetica, Arial, sans-serif;
 	text-decoration:none
 }
- 
+
  /* END CUSTOM THEME */
- 
+
  .ui-bar-a {
 	border:1px solid #2a2a2a;
 	background:#111;
@@ -169,7 +169,7 @@
 	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #666), color-stop(1, #222)); */
 	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#666666', EndColorStr='#222222)')"
 /*	background:	rgba(255, 0, 0, 0.8) */
-	
+
 
 }
 .ui-body-a, .ui-body-a input, .ui-body-a select, .ui-body-a textarea, .ui-body-a button {
@@ -254,7 +254,7 @@
 }
 .ui-body-b {
 	border:1px solid #c6c6c6;
-	background:#ccc; 
+	background:#ccc;
 	color:#333;
 	text-shadow:0 1px 0 #fff;
 	font-weight:normal;
@@ -308,7 +308,7 @@
 	text-shadow:0 -1px 1px #225377;
 	background-image:-moz-linear-gradient(top, #396b9e, #4e89c5);
 	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #396b9e), color-stop(1, #4e89c5));
-	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#396b9e', EndColorStr='#4e89c5')";	
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#396b9e', EndColorStr='#4e89c5')";
 }
 
 .ui-btn-down-b a.ui-link-inherit {
@@ -473,7 +473,7 @@
 }
 .ui-bar-e {
 	border:1px solid #f7c942;
-	background:#fadb4e; 
+	background:#fadb4e;
 	color:#333;
 	text-shadow:0 1px 0 #fff;
 	background-image:-moz-linear-gradient(top, #fceda7, #fadb4e);
